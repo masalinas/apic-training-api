@@ -1,0 +1,12 @@
+{
+  "trainingdb": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "trainingdb",
+    "password": "thingtrack",
+    "name": "trainingdb",
+    "connector": "mysql",
+    "user": "root"
+  }
+}

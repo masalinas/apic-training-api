@@ -1,0 +1,52 @@
+{
+    "name": "Stock",
+    "plural": "stocks",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+      "validateUpsert": true
+    },
+    "properties": {
+      "id": {
+        "type": "number",
+        "id": true,
+        "required": true,
+        "index": true,
+        "description": "Stock Indentifier",
+        "isArray": false
+      },
+      "quantity": {
+        "type": "number",
+        "required": true,
+        "description": "Stock quantity",
+        "mysql": {
+          "columnName": "quantity",
+          "dataType": "FLOAT",
+          "dataPrecision": 12,
+          "dataScale": 2,
+          "nullable": "N"
+        }
+      },      
+      "status": {
+        "type": "number",
+        "required": true,
+        "description": "Stock quantity",
+        "mysql": {
+          "columnName": "status",
+          "dataType": "TINYINT",
+          "dataLength": 1,
+          "nullable": "N"
+        }
+      }
+    },
+    "validations": [],
+    "relations": {
+        "product": {
+            "type": "belongsTo",
+            "model": "Product",
+            "foreignKey": "productId"
+          }
+    },
+    "acls": [],
+    "methods": {}
+  }

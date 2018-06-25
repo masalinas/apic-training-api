@@ -1,0 +1,131 @@
+type: bluemix
+server:
+  displayName: United Kingdom
+  name: eu-gb
+  host: eu.apiconnect.ibmcloud.com
+org:
+  id: 5b27db1d0cf2176919da2bc7
+  name: masalinasgancedogmailcom-dev
+  displayName: masalinas.gancedo@gmail.com (dev)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://eu.apiconnect.ibmcloud.com/v1/orgs/5b27db1d0cf2176919da2bc7'
+  externalOrgId: c809ec5a-17c2-4935-ba17-44b5bed1f8ad
+  externalInviteOverride: 'https://console.bluemix.net/apis/catalog/invitation?env_id=ibm:yp:eu-gb'
+  externalSpaceId: c809ec5a-17c2-4935-ba17-44b5bed1f8ad
+  externalNativeOrgId: fb9574e9-ce4f-420e-bf66-57e43ab8c309
+  bluemix:
+    inviteUri: 'https://console.bluemix.net/apis/catalog/invitation?env_id=ibm:yp:eu-gb'
+    organization: fb9574e9-ce4f-420e-bf66-57e43ab8c309
+    space: c809ec5a-17c2-4935-ba17-44b5bed1f8ad
+catalog:
+  id: 5b27db1e0cf2176919da2bd3
+  orgId: 5b27db1d0cf2176919da2bc7
+  name: Sandbox
+  shortName: sb
+  owner:
+    id: 5b27db1d0cf2176919da2bc4
+    username: masalinas.gancedo@gmail.com
+    context: apimanager
+    idpId: 58335d5ed20e47053bf50fd0
+    email: masalinas.gancedo@gmail.com
+    firstName: ''
+    lastName: ''
+    status: ACTIVE
+    lastLoginTime: '2018-06-18T16:17:49.312+0000'
+    url: 'https://eu.apiconnect.ibmcloud.com/v1/users/5b27db1d0cf2176919da2bc4'
+  apiCenter: false
+  portalType: BASIC
+  portalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/masalinasgancedogmailcom-dev/sb'
+  advPortalUrl: 'https://sb-masalinasgancedogmailcom-dev.developer.eu.apiconnect.ibmcloud.com'
+  gatewayType: DataPowerGateway
+  gwServices:
+    - id: PRODAPIC_APIMGMT_GATEWAY
+      endpointUrl: 'https://api.eu.apiconnect.ibmcloud.com/masalinasgancedogmailcom-dev/sb'
+  idp: 5b27db1f0cf2176919da2bd4
+  idps:
+    - 5b27db1f0cf2176919da2bd4
+  availableRoles:
+    - developer
+    - viewer
+  default: false
+  autoDeploy: true
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: true
+  spaceEnabled: false
+  spaceIds:
+    - 5b27db200cf2176919da2bdc
+  testAppEnabled: true
+  testAppCredentials:
+    clientId: 41bdf2e8-e427-496d-bad7-8e45bcf4b816
+    clientSecret: lI2fK5xL6sF1qL6bO7jY8eB5iJ7aB5rU8yE8wP6gD8kE3xO7gX
+  createdAt: '2018-06-18T16:17:35.543+0000'
+  updatedAt: '2018-06-18T16:17:35.543+0000'
+  createdBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: apim-ops@wwpdl.vnet.ibm.com
+  url: >-
+    https://eu.apiconnect.ibmcloud.com/v1/orgs/5b27db1d0cf2176919da2bc7/environments/5b27db1e0cf2176919da2bd3
+  applicationLifecycleEnabled: false
+  productDeploymentApprovalRequiredStates: []
+  orgName: masalinasgancedogmailcom-dev
+space:
+  none: true
+app:
+  metadata:
+    guid: c7ff1fc9-2378-4730-b838-1ecf08ca4ba4
+    url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4
+    created_at: '2018-06-18T16:29:39Z'
+    updated_at: '2018-06-18T16:29:39Z'
+  entity:
+    name: training
+    production: false
+    space_guid: c809ec5a-17c2-4935-ba17-44b5bed1f8ad
+    stack_guid: 423dd340-c07e-44c2-b7fb-601c10fd32d3
+    buildpack: null
+    detected_buildpack: null
+    detected_buildpack_guid: null
+    environment_json: {}
+    memory: 256
+    instances: 1
+    disk_quota: 1024
+    state: STOPPED
+    version: b25819f9-b907-4f7f-9ef8-ac7fb787e87b
+    command: null
+    console: false
+    debug: null
+    staging_task_id: null
+    package_state: PENDING
+    health_check_type: port
+    health_check_timeout: null
+    health_check_http_endpoint: null
+    staging_failed_reason: null
+    staging_failed_description: null
+    diego: true
+    docker_image: null
+    docker_credentials:
+      username: null
+      password: null
+    package_updated_at: null
+    detected_start_command: ''
+    enable_ssh: true
+    ports:
+      - 8080
+    space_url: /v2/spaces/c809ec5a-17c2-4935-ba17-44b5bed1f8ad
+    stack_url: /v2/stacks/423dd340-c07e-44c2-b7fb-601c10fd32d3
+    routes_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/routes
+    events_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/events
+    service_bindings_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/service_bindings
+    route_mappings_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/route_mappings
+id: 24228455-6141-44db-b44f-876204602c00
+target: 1.0.0
+versionOptions:
+  inplaceUpdate: true
+publishApp: true
+publishProducts: false
+workspaceDir:
+  path: /home/formacion/git/apic-training-app

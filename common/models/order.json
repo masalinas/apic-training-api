@@ -1,0 +1,88 @@
+{
+  "name": "Order",
+  "plural": "orders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true,
+      "description": "Oder Indentifier",
+      "isArray": false,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "INT",
+        "dataLength": 11,
+        "nullable": "N"
+      }
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "description": "Order code",
+      "mysql": {
+        "columnName": "code",
+        "dataType": "VARCHAR",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },    
+    "client": {
+      "type": "string",
+      "required": true,
+      "description": "Order client",
+      "mysql": {
+        "columnName": "client",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "shippingDate": {
+      "type": "date",
+      "required": false,
+      "mysql": {
+          "columnName": "shippingDate",
+          "dataType": "DATETIME",
+          "nullable": "Y"
+      }
+    },
+    "note": {
+      "type": "string",
+      "required": false,
+      "description": "Order notes",
+      "mysql": {
+        "columnName": "note",
+        "dataType": "VARCHAR",
+        "dataLength": 510,
+        "nullable": "Y"
+      }
+    },
+    "status": {
+      "type": "number",
+      "required": true,
+      "description":"Order status",
+      "mysql": {
+        "columnName": "status",
+        "dataType": "INT",
+        "dataLength": 11,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "orderLines": {
+      "type": "hasMany",
+      "model": "OrderLine",
+      "foreignKey": "orderId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
