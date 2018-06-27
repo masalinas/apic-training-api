@@ -1,0 +1,24 @@
+{ 
+    "_id" : ObjectId("5b33dd57bd557e38f08668de"), 
+    "productId" : ObjectId("5b33dab2bd557e38f08668c2"), 
+    "quantity" : 500.0, 
+    "status" : 1.0
+}
+{ 
+    "_id" : ObjectId("5b33dd71bd557e38f08668df"), 
+    "productId" : ObjectId("5b33dac6bd557e38f08668c3"), 
+    "quantity" : 1500.0, 
+    "status" : 1.0
+}
+{ 
+    "_id" : ObjectId("5b33dd7abd557e38f08668e0"), 
+    "productId" : ObjectId("5b33dad3bd557e38f08668c4"), 
+    "quantity" : 200.0, 
+    "status" : 1.0
+}
+{ 
+    "_id" : ObjectId("5b33dd7fbd557e38f08668e1"), 
+    "productId" : ObjectId("5b33dadfbd557e38f08668c5"), 
+    "quantity" : 80.0, 
+    "status" : 2.0
+}
