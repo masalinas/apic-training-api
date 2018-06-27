@@ -1,5 +1,5 @@
 {
-  "name": "apic_training_api",
+  "name": "apic-training-api",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
