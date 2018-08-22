@@ -14,19 +14,19 @@
     ]
   },
   "Order": {
-    "dataSource": "trainingdb",
+    "dataSource": "apiconnectdb",
     "public": true
   },
   "OrderLine": {
-    "dataSource": "trainingdb",
+    "dataSource": "apiconnectdb",
     "public": true
   },
   "Product": {
-    "dataSource": "trainingdb",
+    "dataSource": "apiconnectdb",
     "public": true
   },
   "Stock": {
-    "dataSource": "trainingdb",
+    "dataSource": "apiconnectdb",
     "public": true
   }
 }

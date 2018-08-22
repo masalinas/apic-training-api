@@ -1,12 +1,12 @@
 {
-  "trainingdb": {
+  "apiconnectdb": {
     "host": "localhost",
     "port": 3306,
     "url": "",
-    "database": "trainingdb",
-    "password": "thingtrack",
-    "name": "trainingdb",
-    "connector": "mysql",
-    "user": "root"
+    "name": "apiconnectdb",     
+    "connector": "mysql",   
+    "database": "apiconnectdb",
+    "user": "root",
+    "password": "thingtrack"
   }
 }
