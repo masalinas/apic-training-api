@@ -1,0 +1,2138 @@
+paths:
+  '/orders/{id}/orderLines/{fk}':
+    get:
+      tags:
+        - Order
+      summary: Find a related item by id for orderLines.
+      operationId: Order.prototype.__findById__orderLines
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for orderLines
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+    delete:
+      tags:
+        - Order
+      summary: Delete a related item by id for orderLines.
+      operationId: Order.prototype.__destroyById__orderLines
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for orderLines
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Order
+      summary: Update a related item by id for orderLines.
+      operationId: Order.prototype.__updateById__orderLines
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for orderLines
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/OrderLine'
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+  '/orders/{id}/orderLines':
+    get:
+      tags:
+        - Order
+      summary: Queries orderLines of Order.
+      operationId: Order.prototype.__get__orderLines
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/OrderLine'
+      deprecated: false
+    post:
+      tags:
+        - Order
+      summary: Creates a new instance in orderLines of this model.
+      operationId: Order.prototype.__create__orderLines
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/OrderLine'
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+    delete:
+      tags:
+        - Order
+      summary: Deletes all orderLines of this model.
+      operationId: Order.prototype.__delete__orderLines
+      parameters:
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/orders/{id}/orderLines/count':
+    get:
+      tags:
+        - Order
+      summary: Counts orderLines of Order.
+      operationId: Order.prototype.__count__orderLines
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /orders:
+    post:
+      tags:
+        - Order
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Order.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Order'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+    put:
+      tags:
+        - Order
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Order.upsert__put_orders
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Order'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+    patch:
+      tags:
+        - Order
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Order.upsert__patch_orders
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Order'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+    get:
+      tags:
+        - Order
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Order.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Order'
+      deprecated: false
+  /orders/replaceOrCreate:
+    post:
+      tags:
+        - Order
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Order.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Order'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+  /orders/upsertWithWhere:
+    post:
+      tags:
+        - Order
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Order.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Order'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+  '/orders/{id}/exists':
+    get:
+      tags:
+        - Order
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Order.exists__get_orders_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/orders/{id}':
+    head:
+      tags:
+        - Order
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Order.exists__head_orders_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Order
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Order.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+    delete:
+      tags:
+        - Order
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Order.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Order
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Order.prototype.updateAttributes__put_orders_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Order'
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+    patch:
+      tags:
+        - Order
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Order.prototype.updateAttributes__patch_orders_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Order'
+        - name: id
+          in: path
+          description: Order id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+  '/orders/{id}/replace':
+    post:
+      tags:
+        - Order
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: Order.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Order'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+  /orders/findOne:
+    get:
+      tags:
+        - Order
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Order.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
+      deprecated: false
+  /orders/update:
+    post:
+      tags:
+        - Order
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Order.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Order'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /orders/count:
+    get:
+      tags:
+        - Order
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Order.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/orderLines/{id}/product':
+    get:
+      tags:
+        - OrderLine
+      summary: Fetches belongsTo relation product.
+      operationId: OrderLine.prototype.__get__product
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+  '/orderLines/{id}/stocks/{fk}':
+    get:
+      tags:
+        - OrderLine
+      summary: Find a related item by id for stocks.
+      operationId: OrderLine.prototype.__findById__stocks
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for stocks
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+    delete:
+      tags:
+        - OrderLine
+      summary: Delete a related item by id for stocks.
+      operationId: OrderLine.prototype.__destroyById__stocks
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for stocks
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - OrderLine
+      summary: Update a related item by id for stocks.
+      operationId: OrderLine.prototype.__updateById__stocks
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for stocks
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Stock'
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+  '/orderLines/{id}/stocks':
+    get:
+      tags:
+        - OrderLine
+      summary: Queries stocks of OrderLine.
+      operationId: OrderLine.prototype.__get__stocks
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Stock'
+      deprecated: false
+    post:
+      tags:
+        - OrderLine
+      summary: Creates a new instance in stocks of this model.
+      operationId: OrderLine.prototype.__create__stocks
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Stock'
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+    delete:
+      tags:
+        - OrderLine
+      summary: Deletes all stocks of this model.
+      operationId: OrderLine.prototype.__delete__stocks
+      parameters:
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/orderLines/{id}/stocks/count':
+    get:
+      tags:
+        - OrderLine
+      summary: Counts stocks of OrderLine.
+      operationId: OrderLine.prototype.__count__stocks
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /orderLines:
+    post:
+      tags:
+        - OrderLine
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: OrderLine.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/OrderLine'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+    put:
+      tags:
+        - OrderLine
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: OrderLine.upsert__put_orderLines
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/OrderLine'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+    patch:
+      tags:
+        - OrderLine
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: OrderLine.upsert__patch_orderLines
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/OrderLine'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+    get:
+      tags:
+        - OrderLine
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: OrderLine.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/OrderLine'
+      deprecated: false
+  /orderLines/replaceOrCreate:
+    post:
+      tags:
+        - OrderLine
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: OrderLine.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/OrderLine'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+  /orderLines/upsertWithWhere:
+    post:
+      tags:
+        - OrderLine
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: OrderLine.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/OrderLine'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+  '/orderLines/{id}/exists':
+    get:
+      tags:
+        - OrderLine
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'OrderLine.exists__get_orderLines_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/orderLines/{id}':
+    head:
+      tags:
+        - OrderLine
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'OrderLine.exists__head_orderLines_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - OrderLine
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: OrderLine.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+    delete:
+      tags:
+        - OrderLine
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: OrderLine.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - OrderLine
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'OrderLine.prototype.updateAttributes__put_orderLines_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/OrderLine'
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+    patch:
+      tags:
+        - OrderLine
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'OrderLine.prototype.updateAttributes__patch_orderLines_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/OrderLine'
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+  '/orderLines/{id}/replace':
+    post:
+      tags:
+        - OrderLine
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: OrderLine.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/OrderLine'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+  /orderLines/findOne:
+    get:
+      tags:
+        - OrderLine
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: OrderLine.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/OrderLine'
+      deprecated: false
+  /orderLines/update:
+    post:
+      tags:
+        - OrderLine
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: OrderLine.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/OrderLine'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /orderLines/count:
+    get:
+      tags:
+        - OrderLine
+      summary: Count instances of the model matched by where from the data source.
+      operationId: OrderLine.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /products:
+    post:
+      tags:
+        - Product
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Product.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Product'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+    put:
+      tags:
+        - Product
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Product.upsert__put_products
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Product'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+    patch:
+      tags:
+        - Product
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Product.upsert__patch_products
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Product'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+    get:
+      tags:
+        - Product
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Product.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+      deprecated: false
+  /products/replaceOrCreate:
+    post:
+      tags:
+        - Product
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Product.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Product'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+  /products/upsertWithWhere:
+    post:
+      tags:
+        - Product
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Product.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Product'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+  '/products/{id}/exists':
+    get:
+      tags:
+        - Product
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Product.exists__get_products_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/products/{id}':
+    head:
+      tags:
+        - Product
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Product.exists__head_products_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Product
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Product.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+    delete:
+      tags:
+        - Product
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Product.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Product
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Product.prototype.updateAttributes__put_products_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Product'
+        - name: id
+          in: path
+          description: Product id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+    patch:
+      tags:
+        - Product
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Product.prototype.updateAttributes__patch_products_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Product'
+        - name: id
+          in: path
+          description: Product id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+  '/products/{id}/replace':
+    post:
+      tags:
+        - Product
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: Product.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Product'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+  /products/findOne:
+    get:
+      tags:
+        - Product
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Product.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+  /products/update:
+    post:
+      tags:
+        - Product
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Product.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Product'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /products/count:
+    get:
+      tags:
+        - Product
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Product.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/stocks/{id}/product':
+    get:
+      tags:
+        - Stock
+      summary: Fetches belongsTo relation product.
+      operationId: Stock.prototype.__get__product
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: Stock id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Product'
+      deprecated: false
+  /stocks:
+    post:
+      tags:
+        - Stock
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Stock.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Stock'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+    put:
+      tags:
+        - Stock
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Stock.upsert__put_stocks
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Stock'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+    patch:
+      tags:
+        - Stock
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Stock.upsert__patch_stocks
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Stock'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+    get:
+      tags:
+        - Stock
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Stock.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Stock'
+      deprecated: false
+  /stocks/replaceOrCreate:
+    post:
+      tags:
+        - Stock
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Stock.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Stock'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+  /stocks/upsertWithWhere:
+    post:
+      tags:
+        - Stock
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Stock.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Stock'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+  '/stocks/{id}/exists':
+    get:
+      tags:
+        - Stock
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Stock.exists__get_stocks_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/stocks/{id}':
+    head:
+      tags:
+        - Stock
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Stock.exists__head_stocks_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Stock
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Stock.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+    delete:
+      tags:
+        - Stock
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Stock.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Stock
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Stock.prototype.updateAttributes__put_stocks_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Stock'
+        - name: id
+          in: path
+          description: Stock id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+    patch:
+      tags:
+        - Stock
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Stock.prototype.updateAttributes__patch_stocks_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Stock'
+        - name: id
+          in: path
+          description: Stock id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+  '/stocks/{id}/replace':
+    post:
+      tags:
+        - Stock
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: Stock.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Stock'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+  /stocks/findOne:
+    get:
+      tags:
+        - Stock
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Stock.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Stock'
+      deprecated: false
+  /stocks/update:
+    post:
+      tags:
+        - Stock
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Stock.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Stock'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /stocks/count:
+    get:
+      tags:
+        - Stock
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Stock.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /weathers/getWeatherForecastData:
+    get:
+      tags:
+        - Weather
+      summary: Returns National Weather Service digital weather forecast data
+      operationId: Weather.getWeatherForecastData
+      parameters:
+        - name: latitude
+          in: query
+          description: Latitude
+          required: false
+          type: number
+          format: double
+        - name: longitude
+          in: query
+          description: Longitude
+          required: false
+          type: number
+          format: double
+        - name: product
+          in: query
+          description: Product
+          required: false
+          type: string
+        - name: startTime
+          in: query
+          description: Start time
+          required: false
+          type: string
+          format: date-time
+        - name: endTime
+          in: query
+          description: End time
+          required: false
+          type: string
+          format: date-time
+        - name: unit
+          in: query
+          description: Unit
+          required: false
+          type: string
+        - name: weatherParameters
+          in: query
+          description: Weather Parameters
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/x-any'
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  OrderLine:
+    description: Order Line Service
+    properties:
+      id:
+        description: Oder Line Indentifier
+        type: number
+        format: double
+      line:
+        description: Order Line line number
+        type: number
+        format: double
+      quantity:
+        description: Order Line quantity
+        type: number
+        format: double
+      orderId:
+        type: number
+        format: double
+      productId:
+        type: number
+        format: double
+    required:
+      - id
+      - line
+      - quantity
+    additionalProperties: false
+  Order:
+    description: Order Service
+    properties:
+      client:
+        description: Order client
+        type: string
+      code:
+        description: Order code
+        type: string
+      id:
+        description: Oder Indentifier
+        type: number
+        format: double
+      note:
+        description: Order notes
+        type: string
+      shippingDate:
+        type: string
+        format: date-time
+      status:
+        description: Order status
+        type: number
+        format: double
+    required:
+      - client
+      - code
+      - id
+      - status
+    additionalProperties: false
+  Product:
+    description: Product Service
+    properties:
+      active:
+        description: Product status
+        type: boolean
+      code:
+        description: Product code
+        type: string
+      description:
+        description: Product description
+        type: string
+      id:
+        description: Product Indentifier
+        type: number
+        format: double
+      price:
+        description: Product price
+        type: number
+        format: double
+    required:
+      - active
+      - code
+      - description
+      - id
+      - price
+    additionalProperties: false
+  Stock:
+    description: Stock Service
+    properties:
+      id:
+        description: Stock Indentifier
+        type: number
+        format: double
+      quantity:
+        description: Stock quantity
+        type: number
+        format: double
+      status:
+        description: Stock quantity
+        type: number
+        format: double
+      productId:
+        type: number
+        format: double
+      orderLineId:
+        type: number
+        format: double
+    required:
+      - id
+      - quantity
+      - status
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: apic-training-api
+  version: 1.0.1
+  title: apic-training-api
+  description: API Connect Training API
+  contact:
+    name: Miguel Salinas Gancedo
+    email: miguel@thingtrack.com
+    url: 'http://www.thingtrack.com'
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: >-
+          https://apiconnect-3855f7ad-2e33-412a-85bb-80f4b3d8be33.masalinasgancedogmailcom-dev.apic.eu-gb.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+    production:
+      properties:
+        runtime-url: >-
+          https://apiconnect-b115e25b-52de-4535-875e-226c20f90a8d.masalinasgancedogmailcom-dev.apic.eu-gb.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false
+  categories:
+    - Training

@@ -1,62 +1,63 @@
 {
-    "name": "OrderLine",
-    "plural": "orderLines",
-    "base": "PersistedModel",
-    "idInjection": true,
-    "options": {
-      "validateUpsert": true
-    },
-    "properties": {
-      "id": {
-        "type": "number",
-        "id": true,
-        "required": true,
-        "index": true,
-        "description": "Oder Line Indentifier",
-        "isArray": false,
-        "mysql": {
-          "columnName": "id",
-          "dataType": "INT",
-          "dataLength": 11,
-          "nullable": "N"
-        }
-      },
-      "line": {
-        "type": "number",
-        "required": true,
-        "description": "Order Line line number",
-        "mysql": {
-          "columnName": "line",
-          "dataType": "INT",
-          "dataLength": 11,
-          "nullable": "N"
-        }
-      },      
-      "quantity": {
-        "type": "number",
-        "required": true,
-        "description": "Order Line quantity",
-        "mysql": {
-          "columnName": "quantity",
-          "dataType": "FLOAT",
-          "dataPrecision": 12,
-          "nullable": "N"
-        }
+  "name": "OrderLine",
+  "description": "Order Line Service",
+  "plural": "orderLines",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true,
+      "description": "Oder Line Indentifier",
+      "isArray": false,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "INT",
+        "dataLength": 11,
+        "nullable": "N"
       }
     },
-    "validations": [],
-    "relations": {
-        "product": {
-            "type": "belongsTo",
-            "model": "Product",
-            "foreignKey": "productId"
-          },
-          "stocks": {
-            "type": "hasMany",
-            "model": "Stock",
-            "foreignKey": "orderLineId"
-          }
+    "line": {
+      "type": "number",
+      "required": true,
+      "description": "Order Line line number",
+      "mysql": {
+        "columnName": "line",
+        "dataType": "INT",
+        "dataLength": 11,
+        "nullable": "N"
+      }
     },
-    "acls": [],
-    "methods": {}
-  }
+    "quantity": {
+      "type": "number",
+      "required": true,
+      "description": "Order Line quantity",
+      "mysql": {
+        "columnName": "quantity",
+        "dataType": "FLOAT",
+        "dataPrecision": 12,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+      "type": "belongsTo",
+      "model": "Product",
+      "foreignKey": "productId"
+    },
+    "stocks": {
+      "type": "hasMany",
+      "model": "Stock",
+      "foreignKey": "orderLineId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

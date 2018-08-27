@@ -1,0 +1,27 @@
+{
+  "name": "Weather",
+  "description": "Weather Service",
+  "plural": "weathers",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "scope": {},
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Parameter name quantity"
+    },
+    "value": {
+      "type": "string",
+      "required": true,
+      "description": "Parameter value"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

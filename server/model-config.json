@@ -28,5 +28,9 @@
   "Stock": {
     "dataSource": "apiconnectdb",
     "public": true
+  },
+  "Weather": {
+    "dataSource": "weatherServiceDS",
+    "public": true
   }
 }

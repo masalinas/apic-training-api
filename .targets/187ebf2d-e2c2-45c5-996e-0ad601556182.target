@@ -36,11 +36,12 @@ catalog:
     firstName: ''
     lastName: ''
     status: ACTIVE
-    lastLoginTime: '2018-06-18T16:17:49.312+0000'
+    lastLoginTime: '2018-08-27T10:56:38.491+0000'
     url: 'https://eu.apiconnect.ibmcloud.com/v1/users/5b27db1d0cf2176919da2bc4'
   apiCenter: false
-  portalType: BASIC
+  portalType: ADVANCED
   portalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/masalinasgancedogmailcom-dev/sb'
+  customPortalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/masalinasgancedogmailcom-dev/sb'
   advPortalUrl: 'https://sb-masalinasgancedogmailcom-dev.developer.eu.apiconnect.ibmcloud.com'
   gatewayType: DataPowerGateway
   gwServices:
@@ -50,8 +51,8 @@ catalog:
   idps:
     - 5b27db1f0cf2176919da2bd4
   availableRoles:
-    - developer
     - viewer
+    - developer
   default: false
   autoDeploy: true
   restrictedDeployment: false
@@ -65,9 +66,9 @@ catalog:
     clientId: 41bdf2e8-e427-496d-bad7-8e45bcf4b816
     clientSecret: lI2fK5xL6sF1qL6bO7jY8eB5iJ7aB5rU8yE8wP6gD8kE3xO7gX
   createdAt: '2018-06-18T16:17:35.543+0000'
-  updatedAt: '2018-06-18T16:17:35.543+0000'
+  updatedAt: '2018-06-20T12:56:56.246+0000'
   createdBy: apim-ops@wwpdl.vnet.ibm.com
-  updatedBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: masalinas.gancedo@gmail.com
   url: >-
     https://eu.apiconnect.ibmcloud.com/v1/orgs/5b27db1d0cf2176919da2bc7/environments/5b27db1e0cf2176919da2bd3
   applicationLifecycleEnabled: false
@@ -77,28 +78,48 @@ space:
   none: true
 app:
   metadata:
-    guid: c7ff1fc9-2378-4730-b838-1ecf08ca4ba4
-    url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4
-    created_at: '2018-06-18T16:29:39Z'
-    updated_at: '2018-06-18T16:29:39Z'
+    guid: 3855f7ad-2e33-412a-85bb-80f4b3d8be33
   entity:
-    name: training
+    guid: 3855f7ad-2e33-412a-85bb-80f4b3d8be33
+    name: apic-training-api
+    routes:
+      - guid: d63a1d55-658e-4706-896b-8f0dd380fdc4
+        host: apiconnect-3855f7ad-2e33-412a-85bb-80f4b3d8be33
+        port: null
+        path: ''
+        domain:
+          guid: baba1761-bf30-4301-9440-b5da01e5c3af
+          name: masalinasgancedogmailcom-dev.apic.eu-gb.mybluemix.net
+    running_instances: 0
+    services: []
+    available_domains:
+      - guid: baba1761-bf30-4301-9440-b5da01e5c3af
+        name: masalinasgancedogmailcom-dev.apic.eu-gb.mybluemix.net
+        owning_organization_guid: fb9574e9-ce4f-420e-bf66-57e43ab8c309
+      - guid: 4569bbfb-597c-489b-b516-854f5546350f
+        name: apic.eu-gb.mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+      - guid: 75049093-13e9-4520-80a6-2d6fea6542bc
+        name: eu-gb.mybluemix.net
+        router_group_guid: null
+        router_group_type: null
     production: false
     space_guid: c809ec5a-17c2-4935-ba17-44b5bed1f8ad
     stack_guid: 423dd340-c07e-44c2-b7fb-601c10fd32d3
     buildpack: null
-    detected_buildpack: null
-    detected_buildpack_guid: null
+    detected_buildpack: 'SDK for Node.js(TM) (ibm-node.js-6.14.3, buildpack-v3.21-20180628-1258)'
+    detected_buildpack_guid: 5e3376f0-739b-4132-bdad-52ba688ab043
     environment_json: {}
     memory: 256
     instances: 1
     disk_quota: 1024
     state: STOPPED
-    version: b25819f9-b907-4f7f-9ef8-ac7fb787e87b
+    version: 33f3ae8a-223f-4699-b735-0cbf9b5bc4b0
     command: null
-    console: false
+    console: true
     debug: null
-    staging_task_id: null
+    staging_task_id: ab1dc989-5a82-4e1c-9130-6385ba843a6c
     package_state: PENDING
     health_check_type: port
     health_check_timeout: null
@@ -107,25 +128,21 @@ app:
     staging_failed_description: null
     diego: true
     docker_image: null
-    docker_credentials:
-      username: null
-      password: null
-    package_updated_at: null
-    detected_start_command: ''
+    package_updated_at: '2018-08-27T18:52:23Z'
+    detected_start_command: ./vendor/initial_startup.rb
     enable_ssh: true
-    ports:
-      - 8080
-    space_url: /v2/spaces/c809ec5a-17c2-4935-ba17-44b5bed1f8ad
-    stack_url: /v2/stacks/423dd340-c07e-44c2-b7fb-601c10fd32d3
-    routes_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/routes
-    events_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/events
-    service_bindings_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/service_bindings
-    route_mappings_url: /v2/apps/c7ff1fc9-2378-4730-b838-1ecf08ca4ba4/route_mappings
-id: 24228455-6141-44db-b44f-876204602c00
+    ports: null
+id: 187ebf2d-e2c2-45c5-996e-0ad601556182
 target: 1.0.0
 versionOptions:
   inplaceUpdate: true
 publishApp: true
-publishProducts: false
+publishProducts: true
+specificProducts: true
 workspaceDir:
-  path: /home/formacion/git/apic-training-app
+  name: apic-training-api
+  path: /home/miguel/Proyectos/Formacion/API Connect/Sources/apic-training-api
+  id: 1
+  displayName: apic-training-api
+  type: project
+  projectType: loopback

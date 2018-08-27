@@ -1,5 +1,6 @@
 {
   "name": "Order",
+  "description": "Order Service",
   "plural": "orders",
   "base": "PersistedModel",
   "idInjection": true,
@@ -7,6 +8,28 @@
     "validateUpsert": true
   },
   "properties": {
+    "client": {
+      "type": "string",
+      "required": true,
+      "description": "Order client",
+      "mysql": {
+        "columnName": "client",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "description": "Order code",
+      "mysql": {
+        "columnName": "code",
+        "dataType": "VARCHAR",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
     "id": {
       "type": "number",
       "id": true,
@@ -21,37 +44,6 @@
         "nullable": "N"
       }
     },
-    "code": {
-      "type": "string",
-      "required": true,
-      "description": "Order code",
-      "mysql": {
-        "columnName": "code",
-        "dataType": "VARCHAR",
-        "dataLength": 45,
-        "nullable": "N"
-      }
-    },    
-    "client": {
-      "type": "string",
-      "required": true,
-      "description": "Order client",
-      "mysql": {
-        "columnName": "client",
-        "dataType": "VARCHAR",
-        "dataLength": 255,
-        "nullable": "N"
-      }
-    },
-    "shippingDate": {
-      "type": "date",
-      "required": false,
-      "mysql": {
-          "columnName": "shippingDate",
-          "dataType": "DATETIME",
-          "nullable": "Y"
-      }
-    },
     "note": {
       "type": "string",
       "required": false,
@@ -63,10 +55,19 @@
         "nullable": "Y"
       }
     },
+    "shippingDate": {
+      "type": "date",
+      "required": false,
+      "mysql": {
+        "columnName": "shippingDate",
+        "dataType": "DATETIME",
+        "nullable": "Y"
+      }
+    },
     "status": {
       "type": "number",
       "required": true,
-      "description":"Order status",
+      "description": "Order status",
       "mysql": {
         "columnName": "status",
         "dataType": "INT",

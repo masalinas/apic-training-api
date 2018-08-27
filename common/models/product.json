@@ -1,74 +1,75 @@
 {
-    "name": "Product",
-    "plural": "products",
-    "base": "PersistedModel",
-    "idInjection": true,
-    "options": {
-      "validateUpsert": true
-    },
-    "properties": {
-      "id": {
-        "type": "number",
-        "id": true,
-        "required": true,
-        "index": true,
-        "description": "Product Indentifier",
-        "isArray": false,
-        "mysql": {
-          "columnName": "id",
-          "dataType": "INT",
-          "dataLength": 11,
-          "nullable": "N"
-        }
-      },
-      "code": {
-        "type": "string",
-        "required": true,
-        "description": "Product code",
-        "mysql": {
-          "columnName": "code",
-          "dataType": "VARCHAR",
-          "dataLength": 45,
-          "nullable": "N"
-        }
-      },      
-      "description": {
-        "type": "string",
-        "required": true,
-        "description": "Product description",
-        "mysql": {
-          "columnName": "description",
-          "dataType": "VARCHAR",
-          "dataLength": 255,
-          "nullable": "N"
-        }
-      },
-      "price": {
-        "type": "number",
-        "required": true,
-        "description": "Product price",
-        "mysql": {
-          "columnName": "price",
-          "dataType": "FLOAT",
-          "dataPrecision": 12,
-          "dataScale": 2,
-          "nullable": "N"
-        }
-      },
-      "active": {
-        "type": "boolean",
-        "required": true,
-        "description": "Product status",
-        "mysql": {
-          "columnName": "active",
-          "dataType": "TINYINT",
-          "dataLength": 1,
-          "nullable": "N"          
-        }
+  "name": "Product",
+  "description": "Product Service",
+  "plural": "products",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "description": "Product status",
+      "mysql": {
+        "columnName": "active",
+        "dataType": "TINYINT",
+        "dataLength": 1,
+        "nullable": "N"
       }
     },
-    "validations": [],
-    "relations": {},
-    "acls": [],
-    "methods": {}
-  }
+    "code": {
+      "type": "string",
+      "required": true,
+      "description": "Product code",
+      "mysql": {
+        "columnName": "code",
+        "dataType": "VARCHAR",
+        "dataLength": 45,
+        "nullable": "N"
+      }
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "description": "Product description",
+      "mysql": {
+        "columnName": "description",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true,
+      "description": "Product Indentifier",
+      "isArray": false,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "INT",
+        "dataLength": 11,
+        "nullable": "N"
+      }
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "description": "Product price",
+      "mysql": {
+        "columnName": "price",
+        "dataType": "FLOAT",
+        "dataPrecision": 12,
+        "dataScale": 2,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
