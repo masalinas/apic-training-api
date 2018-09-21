@@ -3,19 +3,13 @@
   "description": "Stock Service",
   "plural": "stocks",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
-    "validateUpsert": true
+    "mysql": {
+      "table": "Stock"
+    }
   },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true,
-      "index": true,
-      "description": "Stock Indentifier",
-      "isArray": false
-    },
     "quantity": {
       "type": "number",
       "required": true,

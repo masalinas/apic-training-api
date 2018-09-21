@@ -1,13 +1,13 @@
 {
     "apiconnectdb": {
         "connector": "mysql",
-        "host": "sl-eu-lon-2-portal.14.dblayer.com",
-        "port": 28836,
+        "host": "localhost",
+        "port": 3306,
         "url": "",
         "database": "apiconnectdb",
         "name": "apiconnectdb",
-        "user": "admin",
-        "password": "ZTFKOEQISPGAKGGI"
+        "user": "root",
+        "password": "thingtrack"
     },
     "weatherServiceDS": {
     "url": "https://graphical.weather.gov/xml/SOAP_server/ndfdXMLserver.php",

@@ -3,9 +3,11 @@
   "description": "Order Service",
   "plural": "orders",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,  
   "options": {
-    "validateUpsert": true
+    "mysql": {
+      "table": "Order"
+    }
   },
   "properties": {
     "client": {
@@ -29,21 +31,7 @@
         "dataLength": 45,
         "nullable": "N"
       }
-    },
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true,
-      "index": true,
-      "description": "Oder Indentifier",
-      "isArray": false,
-      "mysql": {
-        "columnName": "id",
-        "dataType": "INT",
-        "dataLength": 11,
-        "nullable": "N"
-      }
-    },
+    },    
     "note": {
       "type": "string",
       "required": false,

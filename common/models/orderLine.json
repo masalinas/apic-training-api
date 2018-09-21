@@ -2,26 +2,14 @@
   "name": "OrderLine",
   "description": "Order Line Service",
   "plural": "orderLines",
-  "base": "PersistedModel",
-  "idInjection": true,
+  "base": "PersistedModel",  
+  "idInjection": false,  
   "options": {
-    "validateUpsert": true
+    "mysql": {
+      "table": "OrderLine"
+    }
   },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true,
-      "index": true,
-      "description": "Oder Line Indentifier",
-      "isArray": false,
-      "mysql": {
-        "columnName": "id",
-        "dataType": "INT",
-        "dataLength": 11,
-        "nullable": "N"
-      }
-    },
     "line": {
       "type": "number",
       "required": true,

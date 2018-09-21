@@ -2,13 +2,18 @@
     // Utilizar IntelliSense para aprender acerca de los posibles atributos.
     // Mantenga el puntero para ver las descripciones de los existentes atributos 
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+
+    // DEFINE NODE_ENV:
+    //  development:  development mode (Default mode)
+    //  production:  production mode
     "version": "0.2.0",
     "configurations": [            
         {
+            "name": "Launch API",
             "type": "node",
             "request": "launch",
-            "name": "Launch API",
-            "program": "${workspaceFolder}/server/server.js"
+            "program": "${workspaceFolder}/server/server.js",
+            "env": {"NODE_ENV": "development"}
         }
     ]
 }

@@ -3,9 +3,11 @@
   "description": "Product Service",
   "plural": "products",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,  
   "options": {
-    "validateUpsert": true
+    "mysql": {
+      "table": "Product"
+    }
   },
   "properties": {
     "active": {

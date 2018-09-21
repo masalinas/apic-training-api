@@ -1,0 +1,60 @@
+{
+  "name": "Track",
+  "description": "Model Tracks",
+  "plural": "tracks",
+  "base": "PersistedModel",
+  "idInjection": false,  
+  "options": {
+    "mysql": {
+      "table": "Track"
+    }
+  },
+  "properties": {
+    "model": {
+      "type": "string",
+      "required": true,
+      "description": "Model name",
+      "mysql": {
+        "columnName": "model",
+        "dataType": "VARCHAR",
+        "dataLength": 90,
+        "nullable": "N"
+      }
+    },
+    "method": {
+      "type": "string",
+      "required": true,
+      "description": "Model method executed",
+      "mysql": {
+        "columnName": "method",
+        "dataType": "VARCHAR",
+        "dataLength": 90,
+        "nullable": "N"
+      }
+    },    
+    "trace": {
+      "type": "string",
+      "required": true,
+      "description": "Trace message",
+      "mysql": {
+        "columnName": "trace",
+        "dataType": "VARCHAR",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },    
+    "date": {
+      "type": "date",
+      "required": false,
+      "mysql": {
+        "columnName": "date",
+        "dataType": "DATETIME",
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

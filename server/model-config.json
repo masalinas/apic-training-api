@@ -29,6 +29,10 @@
         "dataSource": "apiconnectdb",
         "public": true
       },
+      "Track": {
+        "dataSource": "apiconnectdb",
+        "public": true
+      },
       "Weather": {
         "dataSource": "weatherServiceDS",
         "public": true
