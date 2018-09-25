@@ -137,7 +137,7 @@ module.exports = function(Order) {
             description : "Get Orders by Status Flag with descending order by Shipping Code ",
             accepts: [{arg: 'status', type: 'boolean', description: 'Order Status Flag', required: true, default: true, http: {source: 'path'}}],            
             returns: {arg: 'result', type: 'object', array: true},
-            http: {verb: 'get', path: '/:status/getOrdersByStatus'}
+            http: {verb: 'get', path: '/:status/get-orders-by-status'}
         }
     );
 
@@ -147,7 +147,7 @@ module.exports = function(Order) {
             description : "Close Order",
             accepts: [{arg: 'code', type: 'string', description: 'Order Code', required: true, http: {source: 'path'}}],
             returns: {arg: 'result', type: 'number'},
-            http: {verb: 'post', path: '/:code/closeOrder'}
+            http: {verb: 'post', path: '/:code/close-order'}
         }
     );
 
@@ -159,7 +159,7 @@ module.exports = function(Order) {
                       {arg: 'productCode', type: 'string', description: 'Product Code', required: true, http: {source: 'path'}},
                       {arg: 'quantity', type: 'number', description: 'Quantity', required: true, http: {source: 'path'}}],
             returns: {type: 'object', root: true},
-            http: {verb: 'post', path: '/:code/:productCode/:quantity/addOrderLine'}
+            http: {verb: 'post', path: '/:code/products/:productCode/:quantity/add-order-line'}
         }
     );
 };

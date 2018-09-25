@@ -150,7 +150,7 @@ module.exports = function(Weather) {
                       {arg: 'unit', type: 'string',  description: 'Unit', required: false, http: {source: 'query'}},
                       {arg: 'weatherParameters', type: 'array',  description: 'Weather Parameters', required: false}],
             returns: {type: 'array', root: true},
-            http: {verb: 'get', path: '/getWeatherForecastData'}
+            http: {verb: 'get', path: '/get-weather-forecast-data'}
         }
     );
 };
