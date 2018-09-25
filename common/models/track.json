@@ -3,7 +3,7 @@
   "description": "Model Tracks",
   "plural": "tracks",
   "base": "PersistedModel",
-  "idInjection": false,  
+  "idInjection": false,
   "options": {
     "mysql": {
       "table": "Track"
@@ -31,7 +31,7 @@
         "dataLength": 90,
         "nullable": "N"
       }
-    },    
+    },
     "trace": {
       "type": "string",
       "required": true,
@@ -42,7 +42,7 @@
         "dataLength": 512,
         "nullable": "N"
       }
-    },    
+    },
     "date": {
       "type": "date",
       "required": false,

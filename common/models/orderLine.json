@@ -2,8 +2,8 @@
   "name": "OrderLine",
   "description": "Order Line Service",
   "plural": "orderLines",
-  "base": "PersistedModel",  
-  "idInjection": false,  
+  "base": "PersistedModel",
+  "idInjection": false,
   "options": {
     "mysql": {
       "table": "OrderLine"

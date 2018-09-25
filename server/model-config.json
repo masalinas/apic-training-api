@@ -1,40 +1,40 @@
 {
-    "_meta": {
-        "sources": [
-          "loopback/common/models",
-          "loopback/server/models",
-          "../common/models",
-          "./models"
-        ],
-        "mixins": [
-          "loopback/common/mixins",
-          "loopback/server/mixins",
-          "../common/mixins",
-          "./mixins"
-        ]
-      },
-      "Order": {
-        "dataSource": "apiconnectdb",
-        "public": true
-      },
-      "OrderLine": {
-        "dataSource": "apiconnectdb",
-        "public": true
-      },
-      "Product": {
-        "dataSource": "apiconnectdb",
-        "public": true
-      },
-      "Stock": {
-        "dataSource": "apiconnectdb",
-        "public": true
-      },
-      "Track": {
-        "dataSource": "apiconnectdb",
-        "public": true
-      },
-      "Weather": {
-        "dataSource": "weatherServiceDS",
-        "public": true
-      }
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Order": {
+    "dataSource": "apiconnectdb",
+    "public": true
+  },
+  "OrderLine": {
+    "dataSource": "apiconnectdb",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "apiconnectdb",
+    "public": true
+  },
+  "Stock": {
+    "dataSource": "apiconnectdb",
+    "public": true
+  },
+  "Track": {
+    "dataSource": "apiconnectdb",
+    "public": true
+  },
+  "Weather": {
+    "dataSource": "weatherServiceDS",
+    "public": true
+  }
 }

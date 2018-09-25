@@ -3,7 +3,7 @@
   "description": "Order Service",
   "plural": "orders",
   "base": "PersistedModel",
-  "idInjection": false,  
+  "idInjection": false,
   "options": {
     "mysql": {
       "table": "Order"
@@ -31,7 +31,7 @@
         "dataLength": 45,
         "nullable": "N"
       }
-    },    
+    },
     "note": {
       "type": "string",
       "required": false,
