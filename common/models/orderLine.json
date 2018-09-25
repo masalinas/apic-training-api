@@ -35,6 +35,11 @@
   },
   "validations": [],
   "relations": {
+    "order": {
+      "type": "belongsTo",
+      "model": "Order",
+      "foreignKey": "id"
+    },
     "product": {
       "type": "belongsTo",
       "model": "Product",

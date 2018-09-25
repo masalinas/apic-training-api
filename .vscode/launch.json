@@ -13,7 +13,7 @@
             "type": "node",
             "request": "launch",
             "program": "${workspaceFolder}/server/server.js",
-            "env": {"NODE_ENV": "development"}
+            "env": {"NODE_ENV": "development", "CREATE_TABLES": "0"} 
         }
     ]
 }
