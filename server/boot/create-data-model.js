@@ -1,9 +1,52 @@
 var async = require('async');
 
 module.exports = function(app) {
-
-    if (process.env.CREATE_TABLES == "0")
+    if (process.env.CREATE_TABLES == undefined || process.env.CREATE_TABLES == "0")
         return;
+
+    // Create tables for Acces Control built-in models except User. Principal model inheritance from User wi will used
+    var lbTables = ['AccessToken', 'ACL', 'Scope', 'RoleMapping', 'Role'];
+
+    app.dataSources.apiconnectdb.automigrate(lbTables, function(er) {
+        if (er) throw er;
+
+        console.log('Loopback tables [' - lbTables - '] created in ', app.dataSources.apiconnectdb.name);
+    });
+
+    // Create Principal Table and fill built-in models with data mocks
+    app.dataSources.apiconnectdb.automigrate('Principal', function(er) {
+        if (er) throw er;
+
+        console.log('Loopback tables Principal created in ', app.dataSources.apiconnectdb.name);
+
+        app.models.Principal.create([
+            {id: 1, firstName: 'Admin', lastName: 'Training User', username: 'admin', email: 'admin@thingtrack.com', password: 'thingtrack', created: new Date()},
+            {id: 2, firstName: 'Operator', lastName: 'Training User', username: 'operator', email: 'operator@thingtrack.com', password: 'thingtrack', created: new Date()}
+        ], function(err, users) {
+            if (err) throw err;
+    
+            console.log('Models Users created: \n', JSON.stringify(users));       
+
+            //create default roles
+            app.models.Role.create([
+                {id: 1, name: 'admin', description: 'Admin Role'},
+                {id: 2, name: 'operator', description: 'Operator Role'}
+            ], function(err, roles) {
+                if (err) throw err;
+                
+                console.log('Models Product created: \n', JSON.stringify(roles));       
+
+                 //make admin an admin
+                 roles[0].principals.create({principalType: app.models.RoleMapping.USER,
+                                             principalId: 1
+                }, function(err, principal) {
+                    if (err) throw err;
+
+                    console.log('Created principal:', principal);
+                });
+            });
+        });
+    });
 
     // Create Product Table and fill them with data mocks
     app.dataSources.apiconnectdb.automigrate('Product', function(err) {
@@ -213,5 +256,12 @@ module.exports = function(app) {
                 if (err) throw err;
             });
         });        
-    });     
+    });  
+    
+    // Create Track Table
+    app.dataSources.apiconnectdb.automigrate('Track', function(err) {
+        if (err) throw err;
+
+        console.log('Models Track created: \n');          
+    });
 }

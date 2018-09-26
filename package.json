@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check",
-    "build:sdk": "./node_modules/.bin/lb-sdk server/server ../apic-training-web/src/app/share/"
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server ../apic-training-web/src/app/shared/sdk"
   },
   "dependencies": {
     "@mean-expert/loopback-sdk-builder": "^2.3.1",

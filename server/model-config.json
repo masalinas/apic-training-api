@@ -13,6 +13,34 @@
       "./mixins"
     ]
   },
+  "User": {
+    "dataSource": "apiconnectdb",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "apiconnectdb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "apiconnectdb",
+    "public": false
+  },
+  "Scope": {
+    "dataSource": "apiconnectdb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "apiconnectdb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "apiconnectdb",
+    "public": false
+  },
+  "Principal": {
+    "dataSource": "apiconnectdb",
+    "public": true
+  },
   "Order": {
     "dataSource": "apiconnectdb",
     "public": true

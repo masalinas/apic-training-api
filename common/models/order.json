@@ -10,17 +10,6 @@
     }
   },
   "properties": {
-    "client": {
-      "type": "string",
-      "required": true,
-      "description": "Order client",
-      "mysql": {
-        "columnName": "client",
-        "dataType": "VARCHAR",
-        "dataLength": 255,
-        "nullable": "N"
-      }
-    },
     "code": {
       "type": "string",
       "required": true,
@@ -32,6 +21,17 @@
         "nullable": "N"
       }
     },
+    "client": {
+      "type": "string",
+      "required": true,
+      "description": "Order client",
+      "mysql": {
+        "columnName": "client",
+        "dataType": "VARCHAR",
+        "dataLength": 255,
+        "nullable": "N"
+      }
+    },    
     "note": {
       "type": "string",
       "required": false,
@@ -72,6 +72,27 @@
       "foreignKey": "orderId"
     }
   },
-  "acls": [],
+  "acls": [{
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "DENY"
+    }, {
+    "accessType": "READ",
+    "principalType": "ROLE",
+    "principalId": "$authenticated",
+    "permission": "ALLOW"
+    }, {
+    "accessType": "WRITE",
+    "principalType": "ROLE",
+    "principalId": "admin",
+    "permission": "ALLOW"
+  }, {
+    "accessType": "EXECUTE",
+    "principalType": "ROLE",
+    "principalId": "$authenticated",
+    "permission": "ALLOW",
+    "property": "addOrderLine"
+  }],
   "methods": {}
 }
