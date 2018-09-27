@@ -76,7 +76,67 @@ catalog:
 space:
   none: true
 app:
-  new: true
-  name: apic-training-api
+  metadata:
+    guid: e98c55c2-7329-43d6-b329-862f7003f5d3
+  entity:
+    guid: e98c55c2-7329-43d6-b329-862f7003f5d3
+    name: apic-training-api
+    routes:
+      - guid: 90b2778f-a18d-4f23-ba7f-b62aca7f3d7f
+        host: apiconnect-e98c55c2-7329-43d6-b329-862f7003f5d3
+        port: null
+        path: ''
+        domain:
+          guid: 249d009d-4985-48cf-a146-2e5898c71c03
+          name: trainingthingtrackcom-dev.apic.eu-gb.mybluemix.net
+    running_instances: 0
+    services: []
+    available_domains:
+      - guid: 249d009d-4985-48cf-a146-2e5898c71c03
+        name: trainingthingtrackcom-dev.apic.eu-gb.mybluemix.net
+        owning_organization_guid: 252711de-ceb3-47b8-8f78-19e4b772a3dc
+      - guid: 4569bbfb-597c-489b-b516-854f5546350f
+        name: apic.eu-gb.mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+      - guid: 75049093-13e9-4520-80a6-2d6fea6542bc
+        name: eu-gb.mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+    production: false
+    space_guid: cc3d44e6-e101-4d78-93e4-8482f2867d21
+    stack_guid: 423dd340-c07e-44c2-b7fb-601c10fd32d3
+    buildpack: null
+    detected_buildpack: null
+    detected_buildpack_guid: null
+    environment_json: {}
+    memory: 256
+    instances: 1
+    disk_quota: 1024
+    state: STOPPED
+    version: 0f3856f2-7856-436b-89b8-1e090ec108fa
+    command: null
+    console: false
+    debug: null
+    staging_task_id: null
+    package_state: PENDING
+    health_check_type: port
+    health_check_timeout: null
+    health_check_http_endpoint: null
+    staging_failed_reason: null
+    staging_failed_description: null
+    diego: true
+    docker_image: null
+    package_updated_at: '2018-09-27T11:55:26Z'
+    detected_start_command: ''
+    enable_ssh: true
+    ports: null
 id: 6c508cc7-9e57-44f4-a548-601e2216f0b0
 target: 1.0.0
+versionOptions:
+  inplaceUpdate: true
+publishApp: true
+publishProducts: true
+specificProducts: true
+workspaceDir:
+  path: /home/miguel/Proyectos/Formacion/API Connect/Sources/apic-training-api

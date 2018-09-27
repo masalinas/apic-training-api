@@ -3305,7 +3305,7 @@ x-ibm-configuration:
     sb:
       properties:
         runtime-url: >-
-          https://apiconnect-3855f7ad-2e33-412a-85bb-80f4b3d8be33.masalinasgancedogmailcom-dev.apic.eu-gb.mybluemix.net
+          https://apiconnect-e98c55c2-7329-43d6-b329-862f7003f5d3.trainingthingtrackcom-dev.apic.eu-gb.mybluemix.net
         invoke-tls-profile: 'client:Loopback-client'
     production:
       properties:

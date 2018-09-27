@@ -107,18 +107,18 @@ app:
     space_guid: cc3d44e6-e101-4d78-93e4-8482f2867d21
     stack_guid: 423dd340-c07e-44c2-b7fb-601c10fd32d3
     buildpack: null
-    detected_buildpack: null
-    detected_buildpack_guid: null
+    detected_buildpack: 'SDK for Node.js(TM) (ibm-node.js-6.14.4, buildpack-v3.22-20180904-1913)'
+    detected_buildpack_guid: d546f165-b21a-4450-bc4c-34e50c9ef20f
     environment_json: {}
     memory: 256
     instances: 1
     disk_quota: 1024
     state: STOPPED
-    version: 21ae4826-0372-4309-93b5-e25de34ebf85
+    version: 4db23edf-70cd-4815-af25-ae84d4965636
     command: null
-    console: false
+    console: true
     debug: null
-    staging_task_id: null
+    staging_task_id: 443e1c4c-c44d-4f49-8f58-24eb16cff935
     package_state: PENDING
     health_check_type: port
     health_check_timeout: null
@@ -127,8 +127,8 @@ app:
     staging_failed_description: null
     diego: true
     docker_image: null
-    package_updated_at: '2018-09-27T11:10:06Z'
-    detected_start_command: ''
+    package_updated_at: '2018-09-27T11:47:17Z'
+    detected_start_command: ./vendor/initial_startup.rb
     enable_ssh: true
     ports: null
 id: 3a4d892d-c39e-4ee3-9fc4-d424fc976fa9
