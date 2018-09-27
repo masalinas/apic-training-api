@@ -1,0 +1,143 @@
+type: bluemix
+server:
+  displayName: United Kingdom
+  name: eu-gb
+  host: eu.apiconnect.ibmcloud.com
+org:
+  id: 5babc2320cf2f9cc8391a386
+  name: trainingthingtrackcom-dev
+  displayName: training@thingtrack.com (dev)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://eu.apiconnect.ibmcloud.com/v1/orgs/5babc2320cf2f9cc8391a386'
+  externalOrgId: cc3d44e6-e101-4d78-93e4-8482f2867d21
+  externalInviteOverride: 'https://console.bluemix.net/apis/catalog/invitation?env_id=ibm:yp:eu-gb'
+  externalSpaceId: cc3d44e6-e101-4d78-93e4-8482f2867d21
+  externalNativeOrgId: 252711de-ceb3-47b8-8f78-19e4b772a3dc
+  bluemix:
+    inviteUri: 'https://console.bluemix.net/apis/catalog/invitation?env_id=ibm:yp:eu-gb'
+    organization: 252711de-ceb3-47b8-8f78-19e4b772a3dc
+    space: cc3d44e6-e101-4d78-93e4-8482f2867d21
+catalog:
+  id: 5babc2a00cf29289750d9312
+  orgId: 5babc2320cf2f9cc8391a386
+  name: Production
+  shortName: production
+  owner:
+    id: 5babc2310cf2f9cc8391a383
+    username: training@thingtrack.com
+    context: apimanager
+    idpId: 58335d5ed20e47053bf50fd0
+    email: training@thingtrack.com
+    firstName: ''
+    lastName: ''
+    status: ACTIVE
+    lastLoginTime: '2018-09-26T17:30:38.032+0000'
+    url: 'https://eu.apiconnect.ibmcloud.com/v1/users/5babc2310cf2f9cc8391a383'
+  apiCenter: false
+  portalType: BASIC
+  portalUrl: >-
+    https://developer.eu.apiconnect.ibmcloud.com/trainingthingtrackcom-dev/production
+  advPortalUrl: >-
+    https://production-trainingthingtrackcom-dev.developer.eu.apiconnect.ibmcloud.com
+  gatewayType: DataPowerGateway
+  gwServices:
+    - id: PRODAPIC_APIMGMT_GATEWAY
+      endpointUrl: >-
+        https://api.eu.apiconnect.ibmcloud.com/trainingthingtrackcom-dev/production
+  idp: 56f453730cf2d1a4f061b837
+  idps:
+    - 56f453730cf2d1a4f061b837
+  availableRoles:
+    - viewer
+    - developer
+  default: false
+  autoDeploy: false
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: true
+  spaceEnabled: false
+  spaceIds:
+    - 5babc2a20cf29289750d931a
+  testAppEnabled: false
+  createdAt: '2018-09-26T17:32:18.005+0000'
+  updatedAt: '2018-09-26T17:50:14.269+0000'
+  createdBy: training@thingtrack.com
+  updatedBy: training@thingtrack.com
+  url: >-
+    https://eu.apiconnect.ibmcloud.com/v1/orgs/5babc2320cf2f9cc8391a386/environments/5babc2a00cf29289750d9312
+  applicationLifecycleEnabled: false
+  productDeploymentApprovalRequiredStates: []
+  orgName: trainingthingtrackcom-dev
+space:
+  none: true
+app:
+  metadata:
+    guid: 3c3ba55b-4b91-427c-8ff5-8675d50050a3
+  entity:
+    guid: 3c3ba55b-4b91-427c-8ff5-8675d50050a3
+    name: apic-training-api
+    routes:
+      - guid: ad15dd16-f88f-4c2d-8a3f-365c1cb1ce8e
+        host: apiconnect-3c3ba55b-4b91-427c-8ff5-8675d50050a3
+        port: null
+        path: ''
+        domain:
+          guid: 249d009d-4985-48cf-a146-2e5898c71c03
+          name: trainingthingtrackcom-dev.apic.eu-gb.mybluemix.net
+    running_instances: 0
+    services: []
+    available_domains:
+      - guid: 249d009d-4985-48cf-a146-2e5898c71c03
+        name: trainingthingtrackcom-dev.apic.eu-gb.mybluemix.net
+        owning_organization_guid: 252711de-ceb3-47b8-8f78-19e4b772a3dc
+      - guid: 4569bbfb-597c-489b-b516-854f5546350f
+        name: apic.eu-gb.mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+      - guid: 75049093-13e9-4520-80a6-2d6fea6542bc
+        name: eu-gb.mybluemix.net
+        router_group_guid: null
+        router_group_type: null
+    production: false
+    space_guid: cc3d44e6-e101-4d78-93e4-8482f2867d21
+    stack_guid: 423dd340-c07e-44c2-b7fb-601c10fd32d3
+    buildpack: null
+    detected_buildpack: null
+    detected_buildpack_guid: null
+    environment_json: {}
+    memory: 256
+    instances: 1
+    disk_quota: 1024
+    state: STOPPED
+    version: 21ae4826-0372-4309-93b5-e25de34ebf85
+    command: null
+    console: false
+    debug: null
+    staging_task_id: null
+    package_state: PENDING
+    health_check_type: port
+    health_check_timeout: null
+    health_check_http_endpoint: null
+    staging_failed_reason: null
+    staging_failed_description: null
+    diego: true
+    docker_image: null
+    package_updated_at: '2018-09-27T11:10:06Z'
+    detected_start_command: ''
+    enable_ssh: true
+    ports: null
+id: 3a4d892d-c39e-4ee3-9fc4-d424fc976fa9
+target: 1.0.0
+versionOptions:
+  inplaceUpdate: true
+publishApp: true
+publishProducts: true
+specificProducts: true
+productStageOnly: false
+workspaceDir:
+  path: /home/miguel/Proyectos/Formacion/API Connect/Sources/apic-training-api

@@ -1,4 +1,648 @@
 paths:
+  '/principals/{id}/accessTokens/{fk}':
+    get:
+      tags:
+        - Principal
+      summary: Find a related item by id for accessTokens.
+      operationId: Principal.prototype.__findById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - Principal
+      summary: Delete a related item by id for accessTokens.
+      operationId: Principal.prototype.__destroyById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Principal
+      summary: Update a related item by id for accessTokens.
+      operationId: Principal.prototype.__updateById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+  '/principals/{id}/accessTokens':
+    get:
+      tags:
+        - Principal
+      summary: Queries accessTokens of Principal.
+      operationId: Principal.prototype.__get__accessTokens
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccessToken'
+      deprecated: false
+    post:
+      tags:
+        - Principal
+      summary: Creates a new instance in accessTokens of this model.
+      operationId: Principal.prototype.__create__accessTokens
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - Principal
+      summary: Deletes all accessTokens of this model.
+      operationId: Principal.prototype.__delete__accessTokens
+      parameters:
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/principals/{id}/accessTokens/count':
+    get:
+      tags:
+        - Principal
+      summary: Counts accessTokens of Principal.
+      operationId: Principal.prototype.__count__accessTokens
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /principals:
+    post:
+      tags:
+        - Principal
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Principal.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Principal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+    put:
+      tags:
+        - Principal
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Principal.upsert__put_principals
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Principal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+    patch:
+      tags:
+        - Principal
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Principal.upsert__patch_principals
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Principal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+    get:
+      tags:
+        - Principal
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Principal.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Principal'
+      deprecated: false
+  /principals/replaceOrCreate:
+    post:
+      tags:
+        - Principal
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Principal.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Principal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+  /principals/upsertWithWhere:
+    post:
+      tags:
+        - Principal
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Principal.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Principal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+  '/principals/{id}/exists':
+    get:
+      tags:
+        - Principal
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Principal.exists__get_principals_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/principals/{id}':
+    head:
+      tags:
+        - Principal
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Principal.exists__head_principals_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Principal
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Principal.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+    delete:
+      tags:
+        - Principal
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Principal.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Principal
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Principal.prototype.updateAttributes__put_principals_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Principal'
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+    patch:
+      tags:
+        - Principal
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Principal.prototype.updateAttributes__patch_principals_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Principal'
+        - name: id
+          in: path
+          description: Principal id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+  '/principals/{id}/replace':
+    post:
+      tags:
+        - Principal
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: Principal.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Principal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+  /principals/findOne:
+    get:
+      tags:
+        - Principal
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Principal.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Principal'
+      deprecated: false
+  /principals/update:
+    post:
+      tags:
+        - Principal
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Principal.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Principal'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /principals/count:
+    get:
+      tags:
+        - Principal
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Principal.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /principals/login:
+    post:
+      tags:
+        - Principal
+      summary: Login a user with username/email and password.
+      operationId: Principal.login
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          schema:
+            type: object
+        - name: include
+          in: query
+          description: >-
+            Related objects to include in the response. See the description of
+            return value for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: >+
+              The response body contains properties of the AccessToken created
+              on login.
+
+              Depending on the value of `include` parameter, the body may
+              contain additional properties:
+
+
+
+
+
+
+
+                - `user` - `U+007BUserU+007D` - Data of the currently logged in
+
+              user. (`include=user`)
+
+
+            type: object
+      deprecated: false
+  /principals/logout:
+    post:
+      tags:
+        - Principal
+      summary: Logout a user with access token.
+      operationId: Principal.logout
+      parameters: []
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /principals/confirm:
+    get:
+      tags:
+        - Principal
+      summary: Confirm a user registration with email verification token.
+      operationId: Principal.confirm
+      parameters:
+        - name: uid
+          in: query
+          required: true
+          type: string
+        - name: token
+          in: query
+          required: true
+          type: string
+        - name: redirect
+          in: query
+          required: false
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /principals/reset:
+    post:
+      tags:
+        - Principal
+      summary: Reset password for a user with email.
+      operationId: Principal.resetPassword
+      parameters:
+        - name: options
+          in: body
+          required: true
+          schema:
+            type: object
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
   '/orders/{id}/orderLines/{fk}':
     get:
       tags:
@@ -548,6 +1192,102 @@ paths:
               count:
                 type: number
                 format: double
+      deprecated: false
+  '/orders/{status}/get-orders-by-status':
+    get:
+      tags:
+        - Order
+      summary: 'Get Orders by Status Flag with descending order by Shipping Code '
+      operationId: Order.getOrdersByStatus
+      parameters:
+        - name: status
+          in: path
+          description: Order Status Flag
+          required: true
+          default: true
+          type: boolean
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              result:
+                type: object
+      deprecated: false
+  '/orders/{code}/close-order':
+    post:
+      tags:
+        - Order
+      summary: Close Order
+      operationId: Order.closeOrder
+      parameters:
+        - name: code
+          in: path
+          description: Order Code
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              result:
+                type: number
+                format: double
+      deprecated: false
+  '/orders/{code}/products/{productCode}/{quantity}/add-order-line':
+    post:
+      tags:
+        - Order
+      summary: Add a new Order Line Order
+      operationId: Order.addOrderLine
+      parameters:
+        - name: code
+          in: path
+          description: Order Code
+          required: true
+          type: string
+        - name: productCode
+          in: path
+          description: Product Code
+          required: true
+          type: string
+        - name: quantity
+          in: path
+          description: Quantity
+          required: true
+          type: number
+          format: double
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+  '/orderLines/{id}/order':
+    get:
+      tags:
+        - OrderLine
+      summary: Fetches belongsTo relation order.
+      operationId: OrderLine.prototype.__get__order
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: OrderLine id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Order'
       deprecated: false
   '/orderLines/{id}/product':
     get:
@@ -1905,7 +2645,387 @@ paths:
                 type: number
                 format: double
       deprecated: false
-  /weathers/getWeatherForecastData:
+  /tracks:
+    post:
+      tags:
+        - Track
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Track.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Track'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+    put:
+      tags:
+        - Track
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Track.upsert__put_tracks
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Track'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+    patch:
+      tags:
+        - Track
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Track.upsert__patch_tracks
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Track'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+    get:
+      tags:
+        - Track
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Track.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Track'
+      deprecated: false
+  /tracks/replaceOrCreate:
+    post:
+      tags:
+        - Track
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Track.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Track'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+  /tracks/upsertWithWhere:
+    post:
+      tags:
+        - Track
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Track.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Track'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+  '/tracks/{id}/exists':
+    get:
+      tags:
+        - Track
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Track.exists__get_tracks_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/tracks/{id}':
+    head:
+      tags:
+        - Track
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Track.exists__head_tracks_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Track
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Track.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+    delete:
+      tags:
+        - Track
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Track.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Track
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Track.prototype.updateAttributes__put_tracks_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Track'
+        - name: id
+          in: path
+          description: Track id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+    patch:
+      tags:
+        - Track
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Track.prototype.updateAttributes__patch_tracks_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Track'
+        - name: id
+          in: path
+          description: Track id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+  '/tracks/{id}/replace':
+    post:
+      tags:
+        - Track
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: Track.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Track'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+  /tracks/findOne:
+    get:
+      tags:
+        - Track
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Track.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Track'
+      deprecated: false
+  /tracks/update:
+    post:
+      tags:
+        - Track
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Track.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Track'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /tracks/count:
+    get:
+      tags:
+        - Track
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Track.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /weathers/get-weather-forecast-data:
     get:
       tags:
         - Weather
@@ -1963,19 +3083,75 @@ paths:
 definitions:
   x-any:
     properties: {}
+  AccessToken:
+    properties:
+      id:
+        type: string
+      ttl:
+        default: 1209600
+        description: time to live in seconds (2 weeks by default)
+        type: number
+        format: double
+      created:
+        type: string
+        format: date-time
+      userId:
+        type: number
+        format: double
+    required:
+      - id
+    additionalProperties: false
+  Principal:
+    properties:
+      firstName:
+        description: First name
+        type: string
+      lastName:
+        description: Last name
+        type: string
+      phone:
+        description: Phone number
+        type: string
+      realm:
+        type: string
+      username:
+        type: string
+      credentials:
+        type: object
+      challenges:
+        type: object
+      email:
+        type: string
+      emailVerified:
+        type: boolean
+      status:
+        type: string
+      created:
+        type: string
+        format: date-time
+      lastUpdated:
+        type: string
+        format: date-time
+      id:
+        type: number
+        format: double
+    required:
+      - firstName
+      - lastName
+      - email
+    additionalProperties: false
   OrderLine:
     description: Order Line Service
     properties:
-      id:
-        description: Oder Line Indentifier
-        type: number
-        format: double
       line:
         description: Order Line line number
         type: number
         format: double
       quantity:
         description: Order Line quantity
+        type: number
+        format: double
+      id:
         type: number
         format: double
       orderId:
@@ -1985,23 +3161,18 @@ definitions:
         type: number
         format: double
     required:
-      - id
       - line
       - quantity
     additionalProperties: false
   Order:
     description: Order Service
     properties:
-      client:
-        description: Order client
-        type: string
       code:
         description: Order code
         type: string
-      id:
-        description: Oder Indentifier
-        type: number
-        format: double
+      client:
+        description: Order client
+        type: string
       note:
         description: Order notes
         type: string
@@ -2012,52 +3183,51 @@ definitions:
         description: Order status
         type: number
         format: double
+      id:
+        type: number
+        format: double
     required:
-      - client
       - code
-      - id
+      - client
       - status
     additionalProperties: false
   Product:
     description: Product Service
     properties:
-      active:
-        description: Product status
-        type: boolean
       code:
         description: Product code
         type: string
       description:
         description: Product description
         type: string
-      id:
-        description: Product Indentifier
-        type: number
-        format: double
       price:
         description: Product price
         type: number
         format: double
+      active:
+        description: Product status
+        type: boolean
+      id:
+        type: number
+        format: double
     required:
-      - active
       - code
       - description
-      - id
       - price
+      - active
     additionalProperties: false
   Stock:
     description: Stock Service
     properties:
-      id:
-        description: Stock Indentifier
-        type: number
-        format: double
       quantity:
         description: Stock quantity
         type: number
         format: double
       status:
         description: Stock quantity
+        type: number
+        format: double
+      id:
         type: number
         format: double
       productId:
@@ -2067,9 +3237,31 @@ definitions:
         type: number
         format: double
     required:
-      - id
       - quantity
       - status
+    additionalProperties: false
+  Track:
+    description: Model Tracks
+    properties:
+      model:
+        description: Model name
+        type: string
+      method:
+        description: Model method executed
+        type: string
+      trace:
+        description: Trace message
+        type: string
+      date:
+        type: string
+        format: date-time
+      id:
+        type: number
+        format: double
+    required:
+      - model
+      - method
+      - trace
     additionalProperties: false
 basePath: /api
 swagger: '2.0'
@@ -2118,7 +3310,7 @@ x-ibm-configuration:
     production:
       properties:
         runtime-url: >-
-          https://apiconnect-b115e25b-52de-4535-875e-226c20f90a8d.masalinasgancedogmailcom-dev.apic.eu-gb.mybluemix.net
+          https://apiconnect-3c3ba55b-4b91-427c-8ff5-8675d50050a3.trainingthingtrackcom-dev.apic.eu-gb.mybluemix.net
         invoke-tls-profile: 'client:Loopback-client'
   assembly:
     execute:

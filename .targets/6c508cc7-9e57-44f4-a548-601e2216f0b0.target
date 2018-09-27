@@ -1,0 +1,82 @@
+type: bluemix
+server:
+  displayName: United Kingdom
+  name: eu-gb
+  host: eu.apiconnect.ibmcloud.com
+org:
+  id: 5babc2320cf2f9cc8391a386
+  name: trainingthingtrackcom-dev
+  displayName: training@thingtrack.com (dev)
+  orgType: apiProvider
+  status: active
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+  dormant: false
+  url: 'https://eu.apiconnect.ibmcloud.com/v1/orgs/5babc2320cf2f9cc8391a386'
+  externalOrgId: cc3d44e6-e101-4d78-93e4-8482f2867d21
+  externalInviteOverride: 'https://console.bluemix.net/apis/catalog/invitation?env_id=ibm:yp:eu-gb'
+  externalSpaceId: cc3d44e6-e101-4d78-93e4-8482f2867d21
+  externalNativeOrgId: 252711de-ceb3-47b8-8f78-19e4b772a3dc
+  bluemix:
+    inviteUri: 'https://console.bluemix.net/apis/catalog/invitation?env_id=ibm:yp:eu-gb'
+    organization: 252711de-ceb3-47b8-8f78-19e4b772a3dc
+    space: cc3d44e6-e101-4d78-93e4-8482f2867d21
+catalog:
+  id: 5babc2320cf2f9cc8391a392
+  orgId: 5babc2320cf2f9cc8391a386
+  name: Sandbox
+  shortName: sb
+  owner:
+    id: 5babc2310cf2f9cc8391a383
+    username: training@thingtrack.com
+    context: apimanager
+    idpId: 58335d5ed20e47053bf50fd0
+    email: training@thingtrack.com
+    firstName: ''
+    lastName: ''
+    status: ACTIVE
+    lastLoginTime: '2018-09-26T17:30:38.032+0000'
+    url: 'https://eu.apiconnect.ibmcloud.com/v1/users/5babc2310cf2f9cc8391a383'
+  apiCenter: false
+  portalType: BASIC
+  portalUrl: 'https://developer.eu.apiconnect.ibmcloud.com/trainingthingtrackcom-dev/sb'
+  advPortalUrl: 'https://sb-trainingthingtrackcom-dev.developer.eu.apiconnect.ibmcloud.com'
+  gatewayType: DataPowerGateway
+  gwServices:
+    - id: PRODAPIC_APIMGMT_GATEWAY
+      endpointUrl: 'https://api.eu.apiconnect.ibmcloud.com/trainingthingtrackcom-dev/sb'
+  idp: 5babc2340cf2f9cc8391a393
+  idps:
+    - 5babc2340cf2f9cc8391a393
+  availableRoles:
+    - developer
+    - viewer
+  default: false
+  autoDeploy: true
+  restrictedDeployment: false
+  invitationEnabled: true
+  selfSignUpEnabled: true
+  spaceEnabled: false
+  spaceIds:
+    - 5babc2340cf2f9cc8391a39b
+  testAppEnabled: true
+  testAppCredentials:
+    clientId: 3d344eb5-53ed-443e-b3d1-df19b4460af4
+    clientSecret: P4wB1mM3jK5jM8sU8kK3mG6pV2yN4lX7gG2nH8uN7aX0rA2iC8
+  createdAt: '2018-09-26T17:30:28.071+0000'
+  updatedAt: '2018-09-26T17:30:28.071+0000'
+  createdBy: apim-ops@wwpdl.vnet.ibm.com
+  updatedBy: apim-ops@wwpdl.vnet.ibm.com
+  url: >-
+    https://eu.apiconnect.ibmcloud.com/v1/orgs/5babc2320cf2f9cc8391a386/environments/5babc2320cf2f9cc8391a392
+  applicationLifecycleEnabled: false
+  productDeploymentApprovalRequiredStates: []
+  orgName: trainingthingtrackcom-dev
+space:
+  none: true
+app:
+  new: true
+  name: apic-training-api
+id: 6c508cc7-9e57-44f4-a548-601e2216f0b0
+target: 1.0.0
