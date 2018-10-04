@@ -135,7 +135,7 @@ module.exports = function(Order) {
         'getOrdersByStatus',
         {
             description : "Get Orders by Status Flag with descending order by Shipping Code ",
-            accepts: [{arg: 'status', type: 'boolean', description: 'Order Status Flag', required: true, default: true, http: {source: 'path'}}],            
+            accepts: [{arg: 'status', type: 'number', description: 'Order Status Flag', required: true, default: 1, http: {source: 'path'}}],            
             returns: {arg: 'result', type: 'object', array: true},
             http: {verb: 'get', path: '/:status/get-orders-by-status'}
         }

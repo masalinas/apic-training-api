@@ -20,8 +20,8 @@ module.exports = function(app) {
         console.log('Loopback tables Principal created in ', app.dataSources.apiconnectdb.name);
 
         app.models.Principal.create([
-            {id: 1, firstName: 'Admin', lastName: 'Training User', username: 'admin', email: 'admin@thingtrack.com', password: 'thingtrack', created: new Date()},
-            {id: 2, firstName: 'Operator', lastName: 'Training User', username: 'operator', email: 'operator@thingtrack.com', password: 'thingtrack', created: new Date()}
+            {id: 1, firstName: 'Admin', lastName: 'Admin User', username: 'admin', email: 'admin@thingtrack.com', password: 'thingtrack', created: new Date()},
+            {id: 2, firstName: 'Operator', lastName: 'Operator User', username: 'operator', email: 'operator@thingtrack.com', password: 'thingtrack', created: new Date()}
         ], function(err, users) {
             if (err) throw err;
     

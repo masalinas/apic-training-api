@@ -97,6 +97,13 @@
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "addOrderLine"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "closeOrder"
     }
   ],
   "methods": {}
